@@ -1,4 +1,3 @@
-
 python-screenshot
 =======================
 Python library to make screen captures and save the images to the current working directory.
@@ -7,7 +6,7 @@ Installing:
 ===========
 - Download the source, and run `python setup.py build install`
 
-Usage:
+Examples:
 ==========
 
 - Importing the library:
