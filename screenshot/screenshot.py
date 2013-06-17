@@ -3,7 +3,7 @@ import ImageGrab
 
 class ScreenShot(object):
     
-    def __init__(self, resize=(800,600), path="img", file_type="png"):
+    def __init__(self, resize=(800,600), path="", file_type="png"):
         self.resize = resize
         self.file_type = ''.join([".", file_type])
         self.path = path
