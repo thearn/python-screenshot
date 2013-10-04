@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Python-screenshot : Python library to make screen captures and save the images to the cwd" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Python-screenshot</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/thearn/python-screenshot">View on GitHub</a>
+
+          <h1 id="project_title">Python-screenshot</h1>
+          <h2 id="project_tagline">Python library to make screen captures and save the images to the cwd</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/thearn/python-screenshot/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/thearn/python-screenshot/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="python-screenshot" class="anchor" href="#python-screenshot"><span class="octicon octicon-link"></span></a>python-screenshot</h1>
+
+<p>Python library to make screen captures and save the images to the current working directory.</p>
+
+<h1>
+<a name="installing" class="anchor" href="#installing"><span class="octicon octicon-link"></span></a>Installing:</h1>
+
+<ul>
+<li>Download the source, and run <code>python setup.py build install</code>
+</li>
+</ul><h1>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples:</h1>
+
+<ul>
+<li>Importing the library:</li>
+</ul><div class="highlight highlight-python"><pre><span class="kn">from</span> <span class="nn">screenshot</span> <span class="kn">import</span> <span class="n">ScreenShot</span>
+
+<span class="n">screen</span> <span class="o">=</span> <span class="n">ScreenShot</span><span class="p">()</span>
+</pre></div>
+
+<ul>
+<li>Output image size defaults to 800x450. A custom size can be set when the ScreenShot object is instantiated:</li>
+</ul><div class="highlight highlight-python"><pre><span class="n">screen</span> <span class="o">=</span> <span class="n">ScreenShot</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span>
+</pre></div>
+
+<ul>
+<li>Taking a screenshot: this saves the screenshot to the current working directory as a .png file</li>
+</ul><div class="highlight highlight-python"><pre><span class="n">screen</span><span class="o">.</span><span class="n">grab</span><span class="p">()</span>
+</pre></div>
+
+<p>The system time at the moment the screenshot was taken is used as the filename</p>
+
+<ul>
+<li>Taking two screenshots, 1 second apart:</li>
+</ul><div class="highlight highlight-python"><pre><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">grab</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">grab</span><span class="p">()</span>
+</pre></div>
+
+<ul>
+<li>To check for all screenshot files in the current working directory, and get the file names as well as
+corresponding system times:</li>
+</ul><div class="highlight highlight-python"><pre><span class="kn">from</span> <span class="nn">screenshot</span> <span class="kn">import</span> <span class="n">get_times</span>
+
+<span class="k">print</span> <span class="n">get_times</span><span class="p">()</span>
+</pre></div>
+
+<p>This will return a list of (system time, filename) tuples.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Python-screenshot maintained by <a href="https://github.com/thearn">thearn</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
