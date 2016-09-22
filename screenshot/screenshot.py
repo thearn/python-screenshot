@@ -1,6 +1,6 @@
 import os
 import time
-import ImageGrab
+from PIL import ImageGrab
 
 class ScreenShot(object):
     """
